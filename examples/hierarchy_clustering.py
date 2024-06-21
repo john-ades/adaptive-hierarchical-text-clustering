@@ -66,3 +66,23 @@ if __name__ == '__main__':
     # Print the tree
     for pre, _, node in RenderTree(root):
         print(f"{pre}{node.name}")
+    # output:
+    # Cluster 0
+    # ├── Cluster 0
+    # │   └── Cluster 0
+    # │       └── Cluster 0
+    # │           ├── Artificial intelligence is reshaping the world as we know it
+    # │           └── Machine learning algorithms are becoming increasingly sophisticated,  capable of analyzing vast amounts of data and making predictions with remarkable accuracy
+    # ├── Cluster 2
+    # │   └── Cluster 2
+    # │       └── Cluster 2
+    # │           ├── Natural language processing has made  significant strides, enabling machines to understand and generate human-like text
+    # │           └── Computer vision systems can now recognize and  interpret visual information with precision rivaling human capabilities
+    # └── Cluster 4
+    #     └── Cluster 4
+    #         ├── Cluster 4
+    #         │   └── These advancements are driving innovation across industries,  from healthcare and finance to transportation and entertainment
+    #         └── Cluster 5
+    #             ├── As AI continues to evolve, it raises important questions about ethics,  privacy, and the future of work
+    #             ├── Researchers and policymakers are grappling with the challenge of ensuring that AI development  benefits humanity as a whole
+    #             └── The potential of AI is immense, but so too are the responsibilities that come with its development and deployment
