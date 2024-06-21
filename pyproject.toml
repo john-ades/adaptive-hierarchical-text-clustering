@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaptive-hierarchical-text-clustering"
+authors = [
+    {name = "John Ades", email = "john.a.ades@gmail.com"},
+]
+description = "A library for extracting hierarchical structure from unstructured text using adaptive clustering"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "numpy>=1.19.0",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = ["pytest>=6.0", "anytree>=2.8.0", "sentence-transformers>=2.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/john-ades/adaptive-hierarchical-text-clustering"
+"Bug Tracker" = "https://github.com/john-ades/adaptive-hierarchical-text-clustering/issues"
+
+[tool.setuptools_scm]
+write_to = "src/adaptive_hierarchical_text_clustering/_version.py"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
